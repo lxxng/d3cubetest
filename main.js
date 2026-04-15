@@ -932,7 +932,8 @@ const cubeFaces = svg
 // 切换展开/收起状态
 let isUnfolded = false;
 
-d3.select("#toggle-btn").on("click", function () {
+for (let j = 1; j < 12; j++) {
+d3.select("#toggle-btn"+j).on("click", function () {
   isUnfolded = !isUnfolded;
 
   let first = cubeFaces
@@ -941,7 +942,7 @@ d3.select("#toggle-btn").on("click", function () {
     .attrTween("d", function (d, i) {
       const start = d;
       const end = isUnfolded
-        ? unfoldedPositions[document.getElementById("number").value - 1].values[i]
+        ? unfoldedPositions[j-1].values[i]
         : faces[i];
 
       return function (t) {
@@ -957,8 +958,9 @@ d3.select("#toggle-btn").on("click", function () {
 
 
   // 更新按钮文本
-  d3.select(this).text(isUnfolded ? "收起" : "展开/收起");
+  // d3.select(this).text(isUnfolded ? "收起" : "展开/收起");
 });
+}
 
 /**
  * 

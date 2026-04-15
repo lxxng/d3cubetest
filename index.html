@@ -23,7 +23,13 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            margin: 10px;
+            margin: 5px;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 20px 0;
         }
         .face {
             stroke: #333;
@@ -34,8 +40,19 @@
 <body>
     <h1>D3.js 正方体展开效果</h1>
     <div class="container" id="cube-container"></div>
-    <input type="number" id="number" value="1"></input>
-    <button id="toggle-btn">展开/收起</button>
+    <div class="button-container">
+        <button id="toggle-btn1">第1种</button>
+        <button id="toggle-btn2">第2种</button>
+        <button id="toggle-btn3">第3种</button>
+        <button id="toggle-btn4">第4种</button>
+        <button id="toggle-btn5">第5种</button>
+        <button id="toggle-btn6">第6种</button>
+        <button id="toggle-btn7">第7种</button>
+        <button id="toggle-btn8">第8种</button>
+        <button id="toggle-btn9">第9种</button>
+        <button id="toggle-btn10">第10种</button>
+        <button id="toggle-btn11">第11种</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
